@@ -10,7 +10,7 @@ win = Tk()
 win.geometry('780x450+440+250')
 win.resizable(0,0)
 win.title(' کتابخانه')
-win.config(bg ='light green')
+win.config(bg ='#333663')
 
 #================Functions=======================
 
@@ -92,7 +92,7 @@ def search_item():
     num_entry.insert(0 ,row[4])
 
 def close():
-    c = messagebox.askquestion('هشدار' , 'آیا برای خروج مطمین هستید ؟')
+    c = messagebox.askquestion('هشدار' , 'مایل به خروج هستید؟')
     if c == 'yes':
         win.destroy()
 
@@ -100,21 +100,21 @@ def close():
 #==================Widget=======================
 
 #نام کالا
-name_label = Label(win , text = 'نام کالا : ' , font= 'arial 15' , bg ='light green' , fg='black')
+name_label = Label(win , text = 'نام کالا : ' , font= 'arial 16' , bg ='#8186da' , fg='black')
 name_label.place(x=40 , y=10)
 
 name_entry = Entry(win , width=40 )
 name_entry.place(x=120 , y=15)
 
 #قیمت خرید
-buy_label = Label(win , text='قیمت خرید : ' , font='arial 15' , bg ='light green' , fg='black')
+buy_label = Label(win , text='قیمت خرید : ' , font='arial 16' , bg ='#8186da' , fg='black')
 buy_label.place(x=400, y=10)
 
 buy_entry = Entry(win , width=40 ) 
 buy_entry.place(x=500 , y=10)
 
 #قیمت فروش
-sale_label = Label(win , text='قیمت فروش : ' , font='arial 15' , bg ='light green' , fg='black')
+sale_label = Label(win , text='قیمت فروش : ' , font='arial 16' , bg ='#8186da' , fg='black')
 sale_label.place(x=25, y=60)
 
 sale_entry = Entry(win , width=40 ) 
@@ -122,7 +122,7 @@ sale_entry.place(x=120 , y=65)
 
 
 #تعداد
-num_label = Label(win , text= 'تعداد : ' , font='arial 15' , bg ='light green' , fg='black')
+num_label = Label(win , text= 'تعداد : ' , font='arial 16' , bg ='#8186da' , fg='black')
 num_label.place(x=450, y=60)
 
 num_entry = Entry(win , width=40 ) 
