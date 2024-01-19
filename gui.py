@@ -9,7 +9,7 @@ db = Database('d:/stuff.db')
 win = Tk()
 win.geometry('780x450+440+250')
 win.resizable(0,0)
-win.title('مدیریت کتابخانه')
+win.title(' کتابخانه')
 win.config(bg ='light green')
 
 #================Functions=======================
