@@ -4,7 +4,7 @@ from tkinter import ttk
 from tkinter import messagebox
 from data import Database
 
-db = Database('d:/stuff.db')
+db = Database('c:/sina/stuff.db')
 #==================GUI=============================
 win = Tk()
 win.geometry('780x450+440+250')
@@ -26,13 +26,12 @@ def add ():
     # db.insert_table(ent_fname.get() , ent_lname.get() , ent_address.get() , ent_phone.get())
     # clear()
     
-    # if name_label.get() == '' or buy_label.get() == '':
-    #     messagebox.showinfo('هشدار' , 'لطفا همه فیلدها را پر کنید')
-    # else:
-        
-    db.insert_table(name_entry.get() , buy_entry.get() , sale_entry.get() , num_entry.get())
-    clear()
-    populate_list()
+    if name_entry.get() == '' :
+        messagebox.showinfo('هشدار' , 'لطفا نام کالا را پر کنید')
+    else:        
+        db.insert_table(name_entry.get() , buy_entry.get() , sale_entry.get() , num_entry.get())
+        clear()
+        populate_list()
     
 def clear ():
     name_entry.delete(0,END)
@@ -102,6 +101,9 @@ def close():
 #نام کالا
 name_label = Label(win , text = 'نام کالا : ' , font= 'arial 15' , bg ='light green' , fg='black')
 name_label.place(x=40 , y=10)
+
+star_label=Label(win,text='*',fg='red',bg='light green',font='arial 25')
+star_label.place(x=25,y=10)
 
 name_entry = Entry(win , width=40 )
 name_entry.place(x=120 , y=15)
