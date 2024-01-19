@@ -26,13 +26,13 @@ def add ():
     # db.insert_table(ent_fname.get() , ent_lname.get() , ent_address.get() , ent_phone.get())
     # clear()
     
-    # if name_label.get() == '' or buy_label.get() == '':
-    #     messagebox.showinfo('هشدار' , 'لطفا همه فیلدها را پر کنید')
-    # else:
+    if num_entry.get() == '' :
+        messagebox.showinfo('هشدار' , 'لطفا فیلد تعداد را پرکنید')
+    else:
         
-    db.insert_table(name_entry.get() , buy_entry.get() , sale_entry.get() , num_entry.get())
-    clear()
-    populate_list()
+        db.insert_table(name_entry.get() , buy_entry.get() , sale_entry.get() , num_entry.get())
+        clear()
+        populate_list()
     
 def clear ():
     name_entry.delete(0,END)
@@ -124,6 +124,8 @@ sale_entry.place(x=120 , y=65)
 #تعداد
 num_label = Label(win , text= 'تعداد : ' , font='arial 15' , bg ='light green' , fg='black')
 num_label.place(x=450, y=60)
+star_label=Label(text="*",fg="red" , bg ='light green',font="Arial 25" )
+star_label.place(x=435,y=56)
 
 num_entry = Entry(win , width=40 ) 
 num_entry.place(x=500 , y=65)
