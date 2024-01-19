@@ -73,7 +73,6 @@ def remove_item():
         db.delete_record(int(selected_item[0]))
         clear()
         populate_list()
-
 def update_item():
     global selected_item
     db.update_records(selected_item[0], name_entry.get() , buy_entry.get() , sale_entry.get() , num_entry.get())
